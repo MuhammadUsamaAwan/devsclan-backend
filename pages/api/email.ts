@@ -5,7 +5,12 @@ import nodemailer from 'nodemailer';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   await NextCors(req, res, {
     methods: ['POST'],
-    origin: ['http://localhost:3000', 'https://76.76.21.123', 'https://76.76.21.93'],
+    origin: [
+      'http://localhost:3000',
+      'https://www.devsclan.co.uk',
+      'https://devsclan.co.uk',
+      'https://devsclan.vercel.app',
+    ],
     optionsSuccessStatus: 200,
   });
   if (req.method === 'POST') {
